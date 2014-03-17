@@ -1,0 +1,5 @@
+set current dir to current opening file:
+	in command mode type: ":cd %:p:h" (set for all windows (global)) OR
+	":lcd %:p:h" ((for current window) (local)) OR
+	:set autochdir (then set autochdir! if you don't want autochdir always after that)
+

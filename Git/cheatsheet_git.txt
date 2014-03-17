@@ -1,0 +1,21 @@
+Create a new repository
+	create folder
+	go to folder path
+	git init
+
+Checkout a repository (or clone remote repository to local)
+	git clone /path/to/repo
+	OR:
+	git clone username@password@host:path/to/repo (when remote repo has credientials)
+
+Check what file changes (summary)
+	git status
+
+Add changes to Index/stage status
+	git add <filename>
+	OR:
+	git add . (for fast, * like .)	
+
+Actually commit changes
+	git commit -m "<comment>"
+	git commit -am "<comment>": will do git add * then commit (don't have to type git add, but will only applies to all files that in track status)
