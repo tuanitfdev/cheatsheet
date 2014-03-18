@@ -3,6 +3,16 @@ Create a new repository
 	go to folder path
 	git init
 
+Set up first config (when finish installing git)
+  Set up user name
+    git config --global user.name "Tuan Le"
+  Set up email
+    git config --global user.email tuancnttsp@gmail.com
+    
+
+Get list git config
+  git config --list
+
 Checkout a repository (or clone remote repository to local)
 	git clone /path/to/repo
 	OR:
