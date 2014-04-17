@@ -1,0 +1,20 @@
+
+public class Function {
+
+	public static void main(String[] args) {
+		helloWorld();
+		// helloWorld1(); //error
+	}
+	
+	public static void helloWorld(){
+		System.out.println("Hello World");
+	}
+
+	public void helloWorld1(){ // can not call this non static method from static method
+		System.out.println("Hello World");
+	}
+	
+	public void outputString(String str){
+	
+	}
+}

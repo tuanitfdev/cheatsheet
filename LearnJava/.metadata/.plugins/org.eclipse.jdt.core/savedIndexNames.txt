@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+E:\TUAN\PROJECTS\Cheatsheet\LearnJava\.metadata\.plugins\org.eclipse.jdt.core
+356877281.index
+61467830.index
+1031407698.index
+613748174.index

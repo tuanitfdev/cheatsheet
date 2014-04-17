@@ -3,3 +3,7 @@ set current dir to current opening file:
 	":lcd %:p:h" ((for current window) (local)) OR
 	:set autochdir (then set autochdir! if you don't want autochdir always after that)
 
+move current windows to new tab
+  ctrl+w shift-t (means T uppercase)
+copy current windows to new tab
+  :tab sp
