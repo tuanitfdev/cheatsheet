@@ -33,3 +33,11 @@ Add changes to Index/stage status
 Actually commit changes
 	git commit -m "<comment>"
 	git commit -am "<comment>": will do git add * then commit (don't have to type git add, but will only applies to all files that in track status)
+
+Ignore tracked file temporarily:
+  git update-index --assume-unchanged <path/to/file>
+Start tracking again:
+  git update-index --no-assume-unchanged <path/to/file>
+
+Undo files that in staged status (when use "git add" then want to undo)
+  git reset <path/to/file>
