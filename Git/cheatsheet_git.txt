@@ -1,7 +1,11 @@
 Create a new repository
 	create folder
 	go to folder path
-	git init
+	git init (Create .git folder)
+  git add . (Add all files to git track list)
+
+Auto track remove all files delete outside (means delete file not use git rm)
+  git add -u .
 
 Set up first config (when finish installing git)
   Set up user name

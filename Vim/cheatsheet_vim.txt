@@ -3,3 +3,8 @@ set current dir to current opening file:
 	":lcd %:p:h" ((for current window) (local)) OR
 	:set autochdir (then set autochdir! if you don't want autochdir always after that)
 
+turn off color highlighting in diff mode
+  :set hl+=A:none,C:none,D:none,T:none 
+turn on
+  :set hl&
+
