@@ -41,3 +41,47 @@ Start tracking again:
 
 Undo files that in staged status (when use "git add" then want to undo)
   git reset <path/to/file>
+
+See diff part of 2 file or 2 revision of files
+  git diff <revision1>:<path/to/file1> <revision2>:<path/to/file2>
+  git diff <revision1> <revision2> <path/to/file1> (Often used)
+  Ex:
+    git diff HEAD^^ HEAD main.c
+
+See list revision:
+  git log
+
+See list revision by format:
+  git log --pretty=format:"%h - %an, %ar : %s"
+  (%h: short revision, %an: author name, %ar: author date, %s: subject)
+
+See list revision and show summary statistics:
+  git log --stat
+  git log --shortstat
+
+See list revision by predefined format:
+  git log --pretty=[option]
+  [option]: oneline (show each commit in a single line), short, full, fuller
+
+More useful option in "git log":
+  --abbrev-commit: show SHA-1 checksum in short format
+  --relative-date: relative format date
+  --name-status: show the list of files affected with added/modified/deleted information as well
+  -p: show patch (differences) in commit revision
+  --graph: display an ASCII graph of the branch and merge history beside the log output
+  [limit option]:
+    --no-merges: ignore merge commit
+    -<number>: show <number> revisions in list
+    --since (--after): limit the commits to those made after the specified date
+    --until (--before): limit the commits to those made after the specified date
+    --author: only show author's commit
+    --committer: only show committer's commit
+  Ex:
+    git log --pretty=oneline --abbrev-commit
+          
+
+See list file changes in revision (Only list file name):
+  git diff-tree --name-only -r <revision>
+  git ls-tree --name-only -r <revision>
+
+
