@@ -19,3 +19,23 @@ Add changes to Index/stage status
 Actually commit changes
 	git commit -m "<comment>"
 	git commit -am "<comment>": will do git add * then commit (don't have to type git add, but will only applies to all files that in track status)
+
+
+Undo a commit and redo:
+
+$ git commit ...              (1)
+$ git reset --soft 'HEAD^'    (2)
+$ edit                        (3)
+$ git add ....                (4)
+$ git commit -c ORIG_HEAD     (5)
+
+(1)    This is what you want to undo
+
+(2)    This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both. Leaves working tree as it was before "reset". (The quotes may or may not be required in your shell)
+
+(3)    Make corrections to working tree files.
+
+(4)    Stage changes for commit.
+
+(5)    "reset" copies the old head to .git/ORIG_HEAD; redo the commit by starting with its log message. If you do not need to edit the message further, you can give -C option instead.
+
