@@ -84,4 +84,5 @@ See list file changes in revision (Only list file name):
   git diff-tree --name-only -r <revision>
   git ls-tree --name-only -r <revision>
 
-
+See changes before changing current branch:
+  git diff --name-status <branch_switching_to>
