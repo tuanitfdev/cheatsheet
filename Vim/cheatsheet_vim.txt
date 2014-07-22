@@ -7,3 +7,8 @@ move current windows to new tab
   ctrl+w shift-t (means T uppercase)
 copy current windows to new tab
   :tab sp
+turn off color highlighting in diff mode
+  :set hl+=A:none,C:none,D:none,T:none 
+turn on
+  :set hl&
+

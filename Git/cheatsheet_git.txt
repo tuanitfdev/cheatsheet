@@ -1,7 +1,21 @@
 Create a new repository
 	create folder
 	go to folder path
-	git init
+	git init (Create .git folder)
+  git add . (Add all files to git track list)
+
+Auto track remove all files delete outside (means delete file not use git rm)
+  git add -u .
+
+Set up first config (when finish installing git)
+  Set up user name
+    git config --global user.name "Tuan Le"
+  Set up email
+    git config --global user.email tuancnttsp@gmail.com
+    
+
+Get list git config
+  git config --list
 
 Checkout a repository (or clone remote repository to local)
 	git clone /path/to/repo
@@ -20,6 +34,10 @@ Actually commit changes
 	git commit -m "<comment>"
 	git commit -am "<comment>": will do git add * then commit (don't have to type git add, but will only applies to all files that in track status)
 
+Ignore tracked file temporarily:
+  git update-index --assume-unchanged <path/to/file>
+Start tracking again:
+  git update-index --no-assume-unchanged <path/to/file>
 
 Undo a commit and redo:
 
@@ -39,3 +57,5 @@ $ git commit -c ORIG_HEAD     (5)
 
 (5)    "reset" copies the old head to .git/ORIG_HEAD; redo the commit by starting with its log message. If you do not need to edit the message further, you can give -C option instead.
 
+Undo files that in staged status (when use "git add" then want to undo)
+  git reset <path/to/file>
