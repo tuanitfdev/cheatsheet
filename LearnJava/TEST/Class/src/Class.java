@@ -7,6 +7,8 @@ public class Class {
 //		Helper h = new Helper("Helper Name");
 		h.showInfo();
 		
+		System.out.println("\n/////////////////\n");
+		
 		int res = Helper.Cong(10, 9);
 		System.out.println("Result: " + res);
 		Helper.outputString("Hello World!");

@@ -6,6 +6,8 @@ Create a new repository
 
 Auto track remove all files delete outside (means delete file not use git rm)
   git add -u .
+  OR
+  git add -A .
 
 Set up first config (when finish installing git)
   Set up user name
@@ -104,3 +106,8 @@ See list file changes in revision (Only list file name):
 
 See changes before changing current branch:
   git diff --name-status <branch_switching_to>
+
+Remove files in repo and local
+  git rm <path/to/file>
+Remove files only in repo
+  git rm --cached <path/to/file>
