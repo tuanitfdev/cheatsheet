@@ -155,5 +155,25 @@ Search file commands:
 	find <path_to_folder> <option>:
 		<option>:
 			-name (-iname will ignore case) <file_name>: search file name (can use wildcard to search)
+      -type (
+        f: regular file
+        d: directory
+        l: symbolink
+        c: character device
+        b: block device
+      )
+      -size (
+        c: bytes
+        k: kilobytes
+        M: Megabytes
+        G: Gigabytes
+        b: 512-byte blocks
+      )
+    Note: when use "find" with folders should use name with double quotes ("")
+
+  executing and combining find commands
+    find <find_params> -exec <command_and_params> {} \;
+    {}: used as placeholder for the files that find matches
+    \;: used so that find knows where the command ends
 	
 
