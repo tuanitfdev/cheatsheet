@@ -19,7 +19,8 @@
       });
 
       $scope.t1.test = function() {
-        $scope.t1.d1 = Math.random();
+//        $scope.t1.d1 = Math.random();
+        $scope.t1.d1 = 5;
       }
     }]);
 })();
