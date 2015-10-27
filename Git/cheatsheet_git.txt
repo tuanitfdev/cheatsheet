@@ -19,6 +19,17 @@ Set up first config (when finish installing git)
 Get list git config
   git config --list
 
+Get list remote origin
+  git remote (-v for more details)
+
+Add origin to local existed repo
+  git remote add origin <url>
+  Ex:
+    Add origin and upload first files to remote repo:
+      git remote add origin git@bitbucket.org:tuancnttsp/test.git
+      git push -u origin --all # pushes up the repo and its refs for the first time
+      git push -u origin --tags # pushes up any tags
+
 Checkout a repository (or clone remote repository to local)
 	git clone /path/to/repo
 	OR:

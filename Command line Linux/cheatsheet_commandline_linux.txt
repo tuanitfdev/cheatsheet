@@ -32,6 +32,13 @@ Search:
 	When in Reverse searching mode:
 		C-G: return to origin command at the beginning
 		C-J: go to command line result from searching
+	C-S: Forward searching
+	Note:
+	  You must activate it by disabling Ctrl-S default in terminal startup, use the following command:
+		stty -ixon
+	  Enable it again by the following command:
+		stty ixany
+
 	C-P: go to previous command line in history
 	C-N: go to next command line in history
 	M-<: go to first command line in history
