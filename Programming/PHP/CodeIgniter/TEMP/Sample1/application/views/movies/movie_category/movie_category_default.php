@@ -1,0 +1,1 @@
+This is view, hello <?php echo $user_name;
