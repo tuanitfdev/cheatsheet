@@ -96,12 +96,14 @@ Compress, decompress file commands:
 		tar tvfz archive_name.tar.gz
 		tar tvfj archive_name.tar.bz2
 	-c : create archive
+  -C: decompress to specified directory
 	-x : extract (decompress) archive
 	-t : list archive
 	-v : verpose (view details process)
 	-f <arhive_file_name> : following is archive file name (NOT device)
 	-z: gzip compress method
 	-j: bzip2 compress method
+  --mode <PERMISSION_ARGUMENT> (like chmod argument)
 	
 --------------
 File commands:
