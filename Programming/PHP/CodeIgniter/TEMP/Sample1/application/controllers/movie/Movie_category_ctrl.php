@@ -7,7 +7,7 @@
  */
 
 class Movie_category_ctrl extends CI_Controller {
-    private $_layout;
+    protected $layout_template;
 
     public function __construct() {
         parent::__construct();
@@ -19,15 +19,7 @@ class Movie_category_ctrl extends CI_Controller {
         $data['view'] = 'movies/movie_category/movie_category_default';
         $data['view_data'] = array();
         $data['view_data']['user_name'] = 'Tuan Le';
-        $this->load->view($this->_layout, $data);
-    }
-
-    public function test() {
-        $data = array();
-        $data['view'] = 'movies/movie_category/movie_category_default';
-        $data['view_data'] = array();
-        $data['view_data']['user_name'] = 'Tuan Le';
-        $this->load->view($this->_layout, $data);
+        $this->load->view($this->layout_template, $data);
     }
 
 }

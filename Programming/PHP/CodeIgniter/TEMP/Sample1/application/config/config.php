@@ -358,7 +358,14 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
-$config['m_layout'] = 'movies/layout/movies_layout';
+//$config['default_layout'] = 'movies/layout/movies_layout';
+
+$config['default_layout'] = 'layout/default_layout/main';
+
+$config['layout1'] = 'layout/layout1/main';
+$config['header'] = 'layout/layout1/header';
+$config['footer'] = 'layout/layout1/footer';
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
+
