@@ -122,6 +122,7 @@ File commands:
 	cd -: change current path to previous path
 	cd: change current path to home user path
 	mkdir <path_to_folder>: create folder name at path passed
+    -p: to create parent folder if not exists (useful to create folder chain)
 	touch <path_to_file>: create file with path and file name passed
 	cat <path_to_file>: output file content on command line screen
 	less <path_to_file>: view file (like vim but not full featured like it)
