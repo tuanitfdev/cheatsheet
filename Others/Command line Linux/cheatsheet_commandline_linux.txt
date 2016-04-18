@@ -32,6 +32,13 @@ Search:
 	When in Reverse searching mode:
 		C-G: return to origin command at the beginning
 		C-J: go to command line result from searching
+	C-S: Forward searching
+	Note:
+	  You must activate it by disabling Ctrl-S default in terminal startup, use the following command:
+		stty -ixon
+	  Enable it again by the following command:
+		stty ixany
+
 	C-P: go to previous command line in history
 	C-N: go to next command line in history
 	M-<: go to first command line in history
@@ -89,12 +96,14 @@ Compress, decompress file commands:
 		tar tvfz archive_name.tar.gz
 		tar tvfj archive_name.tar.bz2
 	-c : create archive
+  -C: decompress to specified directory
 	-x : extract (decompress) archive
 	-t : list archive
 	-v : verpose (view details process)
 	-f <arhive_file_name> : following is archive file name (NOT device)
 	-z: gzip compress method
 	-j: bzip2 compress method
+  --mode <PERMISSION_ARGUMENT> (like chmod argument)
 	
 --------------
 File commands:
