@@ -1,3 +1,38 @@
+Set up first config (when finish installing git)
+  Set up user name
+    git config --global user.name "Tuan Le"
+  Set up email
+    git config --global user.email tuancnttsp@gmail.com
+    
+Config ssh to use git with ssh
+  Create file named "config" in ~/.ssh
+  Refer: https://gist.github.com/tuancnttsp/23c86faa29bade642da527dece58d441
+
+  Note: If have issue when connect ssh with public git repo. Should consider emptying the file named "known_hosts" in (~/.ssh) for sure
+
+Config proxy to work with git if needed:
+ In Git Bash:
+  git config --global http.proxy http://10.10.10.10:8080
+
+  export HTTP_PROXY="http://10.10.10.10:8080"
+  export HTTPS_PROXY="http://10.10.10.10:8080"
+  (Or config in windows environment variables)
+
+To test connection with ssh the first time setup to connect with public git repo like github, bitbucket:
+ In Git Bash:
+  ssh -Tvv git@github.com
+  Or
+  ssh -Tvv git@bitbucket.org
+
+Generate ssh key to work with public git repo:
+ In Git Bash:
+  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+Add private key path to ssh-agent to work with public git repo with best experience
+ In Git Bash:
+  eval $(ssh-agent -s)  
+  ssh-add ~/.ssh/id_rsa
+
 Create a new repository
 	create folder
 	go to folder path
@@ -9,12 +44,6 @@ Auto track remove all files delete outside (means delete file not use git rm)
   OR
   git add -A .
 
-Set up first config (when finish installing git)
-  Set up user name
-    git config --global user.name "Tuan Le"
-  Set up email
-    git config --global user.email tuancnttsp@gmail.com
-    
 
 Get list git config
   git config --list
