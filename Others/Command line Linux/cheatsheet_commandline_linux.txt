@@ -204,6 +204,8 @@ Search file commands:
 
 	W2: find '/path/to/folder' -name '*.js' -print -exec grep -i 'string to search for' {} \;
 	W3: find '/path/to/folder' -type f | xargs grep 'text-to-find-here'
+		Note: if file name has funny character such as white-space. Use the following:
+			find '/path/to/folder' -type f -print0 | xargs grep -0 'text-to-find-here' 
 
 
 	
