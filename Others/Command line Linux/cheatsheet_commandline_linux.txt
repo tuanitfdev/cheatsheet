@@ -160,7 +160,9 @@ Search file commands:
 	grep <pattern> <path_to_files>: Search text pattern in files passed 
 		-i: case insensitive
 		-r: recursive search in directories
-		-n: show line number
+	 	-n: show line number
+	   	-l: (lower-case L) can be added to just give the file name of matching files.
+	   	-e (--regexp=PATTERN): use PATTERN for matching
 
 	find <path_to_folder> <option>:
 		<option>:
