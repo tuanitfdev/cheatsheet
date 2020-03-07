@@ -23,7 +23,7 @@ Delete:
 	C-D: Delete from pointer to one character forward
 	BS: Delete from pointer to one character backward
 	C-W: Delete from pointer to one word backward (word convented as all characters except whitespace) (but it will copy to buffer, use C-Y to paste)
-	M-BS: Delete from pointer to one word forward (usual word not like above) (copy to buffer, use C-Y to paste)
+	M-BS: Delete from pointer to one word backward (usual word not like above) (copy to buffer, use C-Y to paste)
 	M-D: Delete from pointer to one word forward (usual word like above) (copy to buffer, use C-Y to paste)
 
 --------------
@@ -116,11 +116,11 @@ File commands:
 		-S: sort by file size
 		-l: show as long listing format, show symbolink details also
 		-d: show directories only
-	cd </path/dir>: change current path to path passed
-	cd ..: change current path to parent
-	cd <./path/dir>: change current path to path passed starting from current path
-	cd -: change current path to previous path
-	cd: change current path to home user path
+	cd </path/dir> : change current path to path passed
+	cd .. : change current path to parent
+	cd <./path/dir> : change current path to path passed starting from current path
+	cd - : change current path to previous path
+	cd : change current path to home user path
 	mkdir <path_to_folder>: create folder name at path passed
     -p: to create parent folder if not exists (useful to create folder chain)
 	touch <path_to_file>: create file with path and file name passed
@@ -147,8 +147,8 @@ File commands:
 		-f: force delete all files (despite non existed files)
 		-i: prompt every file removal
 	
-	ln -s <path_to_file/directory> <soft_link>: create symbolic (soft) link to path of file/directory passed. (more memory to save because of adding inode, if original file die, symbolic link will be invalid)
-	ln <path_to_file> <soft_link>: create hard link to path of file (only file) passed. (save memory because use one inode generally, if file still has one inode, it will exists (means if original file or hard link dies, it's ok and if original file changed path, hard link will be updated)
+	ln -s <path_to_file/directory> <soft_link> : create symbolic (soft) link to path of file/directory passed. (more memory to save because of adding inode, if original file die, symbolic link will be invalid)
+	ln <path_to_file> <soft_link> : create hard link to path of file (only file) passed. (save memory because use one inode generally, if file still has one inode, it will exists (means if original file or hard link dies, it's ok and if original file changed path, hard link will be updated)
 
 --------------
 Bash commands:
