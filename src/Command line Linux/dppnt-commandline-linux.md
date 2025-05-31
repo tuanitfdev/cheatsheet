@@ -1,14 +1,15 @@
+# Orgarnized By Category:
 --Ubuntu OS--
 --Made by LE TRAN ANH TUAN
 
 --------------
-Convention:
+## Convention:
 	C: Control key
 	M: Alt key
 	BS: Backspace key
 
 --------------
-Move Pointer:
+## Move Pointer:
 	C-A: Move pointer to beginning of line
 	C-E: Move pointer to end of line
 	C-F: Move pointer to next character
@@ -17,7 +18,7 @@ Move Pointer:
 	M-B: Move pointer to previous word
 
 --------------
-Delete:
+## Delete:
 	C-U: Delete from pointer to beginning of line (copy to buffer, use C-Y to paste)
 	C-K: Delete from pointer to end of line (copy to buffer, use C-Y to paste)
 	C-D: Delete from pointer to one character forward
@@ -27,7 +28,7 @@ Delete:
 	M-D: Delete from pointer to one word forward (usual word like above) (copy to buffer, use C-Y to paste)
 
 --------------
-Search:
+## Search in bash terminal at prompt:
 	C-R: Reverse searching (type and show result by a character)
 	When in Reverse searching mode:
 		C-G: return to origin command at the beginning
@@ -45,7 +46,7 @@ Search:
 	M->: go to last command line in history
 
 --------------
-Other Command Tips:
+## Other Command Tips:
 	M-D: Exit (logout)
 	C-T: Transpose two characters at pointer (current and previous character)
 	M-T: Transpose two words at pointer (current and previous word)
@@ -55,7 +56,7 @@ Other Command Tips:
 	C-L: Redraw command screen
 	M-.: Show last argument of previous command (repeat to find appropriate argument)
 	M-0,M-.: Show first argument (usually as command) (C-M-Y do the same as M-.) (0 can be replaced by another digit from 1-9 to get nth oridinal number argurment)
-	M+"-"+[digit(1-9)],M-.: get argument like above but count argument from end of line backward (because it's a negative number)
+	M+"-",[digit(1-9) (Note: bỏ M khi bấm digit)],M-.: get argument like above but count argument from end of line backward (because it's a negative number)
 	View more at ref "http://stackoverflow.com/questions/4009412/bash-first-argument-of-the-previous-command?rq=1" and "http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts"
 	!!: repeat last previous command (!!:p to show last previous command)
 	!$: repeat last argument from last previous command (!$:p to show like above)
@@ -65,23 +66,27 @@ Other Command Tips:
 	"!cp:1*:p : show from 1th argument to end of line
 	"!cp:-3:p : show from 3th argument to beginning of line (note: can't use * like above if it's negative number)
 
+Some good cheatsheet bash shortcut keys link:
+https://github.com/fliptheweb/bash-shortcuts-cheat-sheet?tab=readme-ov-file
+https://skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/
+
 --------------
-Install utility (software) commands:
+## Install utility (software) commands:
 	apt-get install <package>: install package from repository
 	apt-cache policy <package>: check package has been installed from repository (OR dpkg -l | grep <package>) and also know which version (only apt-cache policy had)
 
 --------------
-Switch to tty (real terminal console)
+## Switch to tty (real terminal console)
 	C-M-F1 -> C-M-F6: Switch to tty
 	C-M-F7: Back to GUI Desktop
 
 --------------
-Download from internet:
+## Download from internet:
 	curl -L <download_link>: Download file from server link
 	wget <donwload_link>: Download file from server link
 
 --------------
-Compress, decompress file commands:
+## Compress, decompress file commands:
 	tar (ref: http://www.thegeekstuff.com/2010/04/unix-tar-command-examples/)
 	Compress files:
 		tar cvf archive_name.tar dirname/ (Only packaging not compressing)
@@ -106,7 +111,7 @@ Compress, decompress file commands:
   --mode <PERMISSION_ARGUMENT> (like chmod argument)
 	
 --------------
-File commands:
+## File commands:
 
 	ls <./path/dir>: show list files in folder at path passed
 		-a: show all (include hidden)
@@ -151,12 +156,12 @@ File commands:
 	ln <path_to_file> <soft_link> : create hard link to path of file (only file) passed. (save memory because use one inode generally, if file still has one inode, it will exists (means if original file or hard link dies, it's ok and if original file changed path, hard link will be updated)
 
 --------------
-Bash commands:
+## Bash commands:
 	env: show all environment variables
 	export <VARIABLE_NAME>=<value>: assign value to variable
 	
 --------------
-Search file commands:
+## Search file commands:
 	grep <pattern> <path_to_files>: Search text pattern in files passed 
 		-i: case insensitive
 		-r: recursive search in directories
@@ -208,6 +213,8 @@ Search file commands:
 	W3: find '/path/to/folder' -type f | xargs grep 'text-to-find-here'
 		Note: if file name has funny character such as white-space. Use the following:
 			find '/path/to/folder' -type f -print0 | xargs grep -0 'text-to-find-here' 
+
+# Draft:
 
 
 	
